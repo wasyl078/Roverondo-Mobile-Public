@@ -15,23 +15,23 @@ As part of the ZPI course (engineering thesis making), the Roverondo-Mobile appl
 </p>
 
 <p float="left">
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-event-2" width="400" />
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-following-route-2" width="400" /> 
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-event-2.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-following-route-2.png" width="400" /> 
 </p>
 
 <p float="left">
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-leaderboards-1" width="400" />
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-menu-drawer" width="400" /> 
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-leaderboards-1.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-menu-drawer.png" width="400" /> 
 </p>
 
 <p float="left">
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-openelevation-1" width="400" />
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-2" width="400" /> 
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-openelevation-1.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-2.png" width="400" /> 
 </p>
 
 <p float="left">
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-3" width="400" />
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-workout-2" width="400" /> 
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-3.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-workout-2.png" width="400" /> 
 </p>
 
 
