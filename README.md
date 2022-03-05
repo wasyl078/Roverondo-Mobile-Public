@@ -5,34 +5,35 @@ As part of the ZPI course (engineering thesis making), the Roverondo-Mobile appl
 ## Application screenshots
 
 <p float="left">
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-1.png" width="100" />
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-1.png" width="100" /> 
-  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-1.png" width="100" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-1.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-2.png" width="400" /> 
 </p>
 
-![screenshot-comments-reactions-1](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-1.png)
+<p float="left">
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-current-user-1.png" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-current-user-2.png" width="400" /> 
+</p>
 
-![screenshot-comments-reactions-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-comments-reactions-2.png)
+<p float="left">
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-event-2" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-following-route-2" width="400" /> 
+</p>
 
-![screenshot-current-user-1](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-current-user-1.png)
+<p float="left">
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-leaderboards-1" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-menu-drawer" width="400" /> 
+</p>
 
-![screenshot-current-user-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-current-user-2.png)
+<p float="left">
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-openelevation-1" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-2" width="400" /> 
+</p>
 
-![screenshot-event-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-event-2.png)
+<p float="left">
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-3" width="400" />
+  <img src="https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-workout-2" width="400" /> 
+</p>
 
-![screenshot-following-route-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-following-route-2.png)
-
-![screenshot-leaderboards-1](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-leaderboards-1.png)
-
-![screenshot-menu-drawer.png](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-menu-drawer.png)
-
-![screenshot-openelevation-1](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-openelevation-1.png)
-
-![screenshot-set-up-route-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-2.png)
-
-![screenshot-set-up-route-3](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-set-up-route-3.png)
-
-![screenshot-workout-2](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/screenshot-workout-2.png)
 
 ### Credits:
 Thanks to my friends for supporting me and developing while Roverondo service together: 
