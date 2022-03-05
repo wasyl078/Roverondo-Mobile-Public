@@ -2,6 +2,9 @@
 
 As part of the ZPI course (engineering thesis making), the Roverondo-Mobile application has been developed, which is a part of the Roverondo service. This repository contains the project and the implementation of the mobile application for cyclists on devices with the Android OS version 7.0 and newer. This program provides users with every function of the Roverondo service. The main focus was on the implementation of social module of application and on the user route tracking with data collecting from the sensor (barometer) located in the device. The process of designing the UI of the application was made by using Figma, Kotlin programming language and Android Studio IDE were used to build the program. Tools provided by the Auth0 service were used to integrate the login and registration module. Thanks to the Google Cloud Platform it was possible to display the maps in the application. The repository also contains pytest-based framework for application testing, which has been developed with libraries as Selenium and Appium.
 
+## Roverondo System Architecture
+![deployment-diagram](https://github.com/wasyl078/Roverondo-Mobile-Public/blob/master/screenshots/deployment-diagram.png)
+
 ## Application screenshots
 
 <p float="left">
