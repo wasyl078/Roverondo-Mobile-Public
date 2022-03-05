@@ -40,4 +40,4 @@ Thanks to my friends for supporting me and developing while Roverondo service to
  [@Ukasz](https://github.com/Ukasz09), [@PanPawelRaper](https://github.com/PRZYPRAWA), [@Loszka](https://github.com/M1loseph)
  
 
-[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)]
+![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)
