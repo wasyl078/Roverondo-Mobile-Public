@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:weightSum="100"
+    tools:context=".activities.LoginActivity">
+
+    <ImageView
+        android:id="@+id/loginBicycleImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/bicycle_image_1" />
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/LoginHelloBlurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="10"
+        android:elevation="5dp"
+        android:outlineProvider="bounds">
+
+        <LinearLayout
+            android:id="@+id/loginHelloContainerRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_glass_rectangle"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/loginHelloTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="65"
+                android:gravity="start|center"
+                android:text="@string/hello"
+                android:textColor="@color/AppGray"
+                android:textSize="50sp"
+                app:autoSizeMinTextSize="20sp"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/loginSignInToStartTextView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="start|center"
+                android:text="@string/sign_in_to_start"
+                android:textColor="@color/Gray"
+                android:textSize="40sp"
+                app:autoSizeMinTextSize="16sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+    </eightbitlab.com.blurview.BlurView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginButtonsContainerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:paddingHorizontal="0dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/loginBacgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="6dp"
+            card_view:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="20dp">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/loginButtonBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/loginLeftImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/ic_auth0" />
+
+                    <ImageView
+                        android:id="@+id/loginMiddleImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/loginLeftImageView"
+                        app:srcCompat="@drawable/ic_google" />
+
+                    <ImageView
+                        android:id="@+id/loginRightImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/loginMiddleImageView"
+                        app:srcCompat="@drawable/ic_github"
+                        app:tint="@color/AppGray" />
+
+                    <TextView
+                        android:id="@+id/loginTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/loginRightImageView"
+                        android:text="@string/continue_authorization"
+                        android:textColor="@color/AppGray"
+                        android:textSize="21sp" />
+
+                </RelativeLayout>
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

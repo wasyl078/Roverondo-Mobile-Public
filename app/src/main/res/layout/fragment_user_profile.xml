@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    tools:context=".fragments.UserProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/currentUserBioBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/currentUserBioBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/currentUserImageView"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_cloud_download"
+                            android:tint="@color/AppGray" />
+
+                        <TextView
+                            android:id="@+id/currentUserNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_toStartOf="@+id/currentUserPencilEditView"
+                            android:layout_toEndOf="@+id/currentUserImageView"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserBioTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserNameTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/currentUserImageView"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <ImageButton
+                            android:id="@+id/currentUserPencilEditView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="0dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_pencil"
+                            android:tint="@color/AppGray" />
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/AppLightGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/currentUserJoinedAtTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/joined_at"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserGenderTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserJoinedAtTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/gender"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserBirthdateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserGenderTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/birthdate"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserWeightTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserBirthdateTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/weight"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserCityTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserWeightTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/city"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserJoinedAtDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserGenderDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserJoinedAtDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserBirthdateDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserGenderDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserWeightDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserBirthdateDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserCityDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserWeightDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/AppLightGray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/currentUserTotalDistanceTraveledTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_distance_traveled"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTimeInMotionTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTotalDistanceTraveledTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/time_in_motion"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserFollowersTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTimeInMotionTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/followers"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserFollowingTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserFollowersTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/following"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTotalReceivedReactionsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserFollowingTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/total_received_reactions"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTotalGivenReactionsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTotalReceivedReactionsTextView"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/total_given_reactions"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTotalDistanceTraveledDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTimeInMotionDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTotalDistanceTraveledDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserFollowersDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTimeInMotionDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserFollowingDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserFollowersDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTotalReceivedReactionsDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserFollowingDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserTotalGivenReactionsDataTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTotalReceivedReactionsDataTextView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/currentUserActivitiesBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/currentUserActivitiesBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/currentUserActivitiesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activities"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/currentUserActivitiesBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/currentUserDistancesBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/currentUserDistancesBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/currentUserDistancesTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distances"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/currentUserDistancesBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/currentUserMonthlyAverageBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/currentUserAverageSpeedsBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/currentUserAverageSpeedsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/average_speeds"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/currentUserAverageSpeedsBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/currentUserElevationsBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/currentUserElevationsBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/currentUserElevationsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevations"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/currentUserElevationsBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

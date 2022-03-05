@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    tools:context=".fragments.SearchUsersFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchUsersTopBarBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="12dp"
+        card_view:cardUseCompatPadding="true">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/dialogUserProfileEditingBackgroundBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/searchUsersTopBarRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_glass_capsule_border"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchUsersTextInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toStartOf="@+id/searchUsersRelativeLayout"
+                    android:hint="@string/search_users"
+                    android:padding="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/searchUsersTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/searchUsersRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_alignTop="@+id/searchUsersTextInputLayout"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gradient_blue_capsule"
+                    android:minWidth="50dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/searchUsersSearchImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/White" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ListView
+        android:id="@+id/searchUsersListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchUsersTopBarBackgroundCardView"
+        android:layout_marginTop="0dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="-15dp"
+        android:isScrollContainer="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideInset" />
+
+    <TextView
+        android:id="@+id/searchUsersEmptyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/start_searching"
+        android:textColor="@color/White"
+        android:textSize="40sp" />
+
+
+</RelativeLayout>

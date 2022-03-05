@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dialogNewPointBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardUseCompatPadding="true">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/dialogNewPointBackgroundBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_glass_capsule_border"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="0dp">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/dialogNewPointMapView"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:minHeight="350dp"
+                        android:background="@drawable/gradient_glass_capsule_border"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/dialogNewPointCurrentPointTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/AppGray"
+                    android:text="@string/long_press_marker_and_choose_next_point"
+                    android:gravity="center"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout47"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout54">
+
+                    <RelativeLayout
+                        android:id="@+id/dialogNewPointCancelRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_toStartOf="@+id/dialogNewPointAddRelativeLayout"
+                        android:background="@drawable/gradient_red_capsule"
+                        android:padding="5dp"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toStartOf="@+id/dialogNewPointAddRelativeLayout"
+                        card_view:layout_constraintHorizontal_bias="0.5"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/dialogNewPointCancelImageView"
+                            app:tint="@color/White"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_block" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dialogNewPointAddRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_blue_capsule"
+                        android:padding="5dp"
+                        card_view:layout_constraintBottom_toBottomOf="parent"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintHorizontal_bias="0.5"
+                        card_view:layout_constraintStart_toEndOf="@+id/dialogNewPointCancelRelativeLayout"
+                        card_view:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/dialogNewPointAddImageView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/White" />
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

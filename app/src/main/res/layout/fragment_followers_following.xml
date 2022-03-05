@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    tools:context=".fragments.FollowersFollowingFragment">
+
+    <ListView
+        android:id="@+id/followersFollowingListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="-15dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideInset"/>
+
+    <TextView
+        android:id="@+id/followersFollowingEmptyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/placeholder"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

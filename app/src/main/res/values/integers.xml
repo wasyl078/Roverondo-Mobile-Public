@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="available_trips_colors">
+        <item>#666600</item>
+        <item>#b3b300</item>
+        <item>#ffff00</item>
+        <item>#ffff4d</item>
+        <item>#ffff99</item>
+        <item>#664200</item>
+        <item>#b37400</item>
+        <item>#ffa500</item>
+        <item>#ffc14d</item>
+        <item>#ffdb99</item>
+        <item>#70380f</item>
+        <item>#9d4e15</item>
+        <item>#e06f1f</item>
+        <item>#ea9a62</item>
+        <item>#f3c6a5</item>
+        <item>#660000</item>
+        <item>#b30000</item>
+        <item>#ff0000</item>
+        <item>#ff4d4d</item>
+        <item>#ff9999</item>
+        <item>#800015</item>
+        <item>#cc0022</item>
+        <item>#ff1a40</item>
+        <item>#ff6680</item>
+        <item>#ffb3bf</item>
+        <item>#660066</item>
+        <item>#b300b3</item>
+        <item>#ff00ff</item>
+        <item>#ff4dff</item>
+        <item>#ff99ff</item>
+        <item>#410f70</item>
+        <item>#6918b4</item>
+        <item>#8a2be2</item>
+        <item>#a862ea</item>
+        <item>#cda5f3</item>
+        <item>#000066</item>
+        <item>#0000b3</item>
+        <item>#0000ff</item>
+        <item>#4d4dff</item>
+        <item>#9999ff</item>
+        <item>#006600</item>
+        <item>#00b300</item>
+        <item>#00ff00</item>
+        <item>#4dff4d</item>
+        <item>#99ff99</item>
+    </string-array>
+</resources>

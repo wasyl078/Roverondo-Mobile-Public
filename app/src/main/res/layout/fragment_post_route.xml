@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    tools:context=".fragments.PostRouteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/postRouteMapBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/postRouteBackgroundBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/gradient_glass_capsule_border"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/postRouteMapView"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/gradient_glass_capsule_border"
+                            map:liteMode="true"  />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:baselineAligned="false"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="55"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/postRouteTotalDistanceImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_timeline"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/postRouteTotalDistanceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/postRouteTotalDistanceImageView"
+                                    android:text="@string/total_distance"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/postRouteTotalDistanceDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/postRouteTotalDistanceTextView"
+                                    android:layout_alignStart="@+id/postRouteTotalDistanceTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="45"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/postRouteAuthorImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_cloud_download"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/postRouteAuthorTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/postRouteAuthorImageView"
+                                    android:text="@string/author_you"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/postRouteAuthorDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/postRouteAuthorTextView"
+                                    android:layout_alignStart="@+id/postRouteAuthorTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/postRouteTitleTextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/title"
+                        android:paddingHorizontal="5dp"
+                        app:boxStrokeColor="@color/AppLightGray">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/postRouteTitleTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/postRouteDescriptionTextInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/description"
+                        android:paddingHorizontal="5dp"
+                        app:boxStrokeColor="@color/AppLightGray">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/postRouteDescriptionTextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ConstraintLayoutButtons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout47"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout54">
+
+                        <RelativeLayout
+                            android:id="@+id/postRouteCancelRelativeLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:layout_toStartOf="@+id/postRouteSaveRelativeLayout"
+                            android:background="@drawable/gradient_red_capsule"
+                            android:padding="5dp"
+                            card_view:layout_constraintBottom_toBottomOf="parent"
+                            card_view:layout_constraintEnd_toStartOf="@+id/postRouteSaveRelativeLayout"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/postRouteCancelImageView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_block"
+                                app:tint="@color/White" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/postRouteSaveRelativeLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_blue_capsule"
+                            android:padding="5dp"
+                            card_view:layout_constraintBottom_toBottomOf="parent"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintHorizontal_bias="0.5"
+                            card_view:layout_constraintStart_toEndOf="@+id/postRouteCancelRelativeLayout"
+                            card_view:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/postRouteSaveImageView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_save"
+                                app:tint="@color/White" />
+
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/AppGray" />
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/postRouteElevationProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/postRouteElevationProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/postRouteElevationProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevation_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/postRouteElevationProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

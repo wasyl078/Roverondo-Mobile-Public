@@ -1,0 +1,153 @@
+<resources>
+    <!-- Utils -->
+    <string name="app_name">Roverondo-Mobile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="placeholder">Loading…</string>
+    <string name="empty">Empty</string>
+
+    <!-- Login Activity -->
+    <string name="com_auth0_client_id">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="com_auth0_domain">XXXXXXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="com_auth0_scheme">XXXX</string>
+    <string name="hello">Hello!</string>
+    <string name="sign_in_to_start">Sign in to start</string>
+    <string name="continue_authorization">Continue authorization</string>
+    <string name="you_are_already_logged_in">You are already logged in</string>
+    <string name="auth0_scope">openid profile email read:current_user update:current_user_metadata</string>
+    <string name="auth0_audience_0">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="auth0_audience_1">XXXXXXXXXXXXXXXXXXXXX</string>
+    <string name="please_grant_permission">Please grant these GPS permissions :)</string>
+
+    <!-- General Activity & Navigation Drawer & Toolbar -->
+    <string name="wall">Wall</string>
+    <string name="new_route">New route</string>
+    <string name="following_route">Following route</string>
+    <string name="set_up_route">Set up route</string>
+    <string name="event_creator">Event creator</string>
+    <string name="leaderboards">Leaderboards</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="all">All</string>
+    <string name="workouts">Workouts</string>
+    <string name="events">Events</string>
+    <string name="routes">Routes</string>
+    <string name="your_profile">Your profile</string>
+
+    <!-- Wall & Posts -->
+    <string name="new_shared_route">New shared route</string>
+    <string name="new_event">New event</string>
+    <string name="new_workout">New workout</string>
+    <string name="delete">Delete</string>
+
+    <!-- Users Profiles -->
+    <string name="total_distance_traveled">Total distance traveled:</string>
+    <string name="time_in_motion">Time in motion:</string>
+    <string name="followers">Followers:</string>
+    <string name="following">Following:</string>
+    <string name="total_received_reactions">Total received reactions:</string>
+    <string name="total_given_reactions">Total given reactions:</string>
+    <string name="joined_at">Joined at:</string>
+    <string name="gender">Gender:</string>
+    <string name="birthdate">Birthdate:</string>
+    <string name="weight">Weight:</string>
+    <string name="city">City:</string>
+    <string name="activities">Activities</string>
+    <string name="distances">Distances [km]</string>
+    <string name="average_speeds">Average speed [km/h]</string>
+    <string name="elevations">Elevations [m]</string>
+    <string name="loading_data">Loading data…</string>
+    <string name="follow">Follow</string>
+    <string name="followed">Followed</string>
+    <string name="follow_question_mark">Followed?</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_your_profile">Edit your profile</string>
+    <string name="edit_your_gender">Edit your gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="not_specified">Not specified</string>
+
+    <!-- Details Workout / Event-->
+    <string name="workout_details">Workout details</string>
+    <string name="event_details">Event details</string>
+    <string name="route_details">Route details</string>
+    <string name="speed_profile">Speed profile [km/h]</string>
+    <string name="elevation_profile">Elevation profile [m]</string>
+    <string name="pressure_profile">Pressure profile [hPa]</string>
+    <string name="total_duration">Total duration</string>
+    <string name="total_distance">Total distance</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="calories_burned">Calories burned</string>
+    <string name="average_speed">Average speed</string>
+    <string name="max_speed">Max speed</string>
+    <string name="min_pressure">Min pressure</string>
+    <string name="avg_pressure">Avg pressure</string>
+    <string name="max_pressure">Max pressure</string>
+    <string name="min_altitude">Min attitude</string>
+    <string name="avg_altitude">Avg altitude</string>
+    <string name="max_altitude">Max altitude</string>
+    <string name="location">Location</string>
+    <string name="author">Author</string>
+    <string name="start_date">Start date</string>
+    <string name="join">Join</string>
+    <string name="joined">Joined</string>
+    <string name="start">Start</string>
+    <string name="no_pressure_data">No pressure data</string>
+
+    <!-- Tracking Fragment-->
+    <string name="start_new_route">Start new route</string>
+    <string name="stop_route">Stop route</string>
+    <string name="distance">Distance</string>
+    <string name="empty_time">00:00:00</string>
+    <string name="empty_distance">- m</string>
+    <string name="you_cannot_go_back_now">"You cannot go back now. Stop tracking first."</string>
+
+    <!-- Post Workout Fragment-->
+    <string name="author_you">Author (you)</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+
+    <!-- Search Users Fragment-->
+    <string name="search">Search</string>
+    <string name="search_users">Search users</string>
+    <string name="start_searching">Start searching</string>
+    <string name="text_must_be_at_least_3_chars">Search text must be at least 3 characters long</string>
+
+    <!-- Comments Dialog-->
+    <string name="new_comment">New comment</string>
+
+    <!-- Set Up New Route Fragment-->
+    <string name="add_new_point">Add new point</string>
+    <string name="create_route">Create route</string>
+    <string name="point">Point: #</string>
+    <string name="current_point">Current point:</string>
+    <string name="points_number">Points number:</string>
+    <string name="long_press_marker_and_choose_next_point">Long press marker and choose next point</string>
+    <string name="post_route">Post route</string>
+
+    <!-- Event Fragment-->
+    <string name="click_here_to_choose_new_route">Click here to choose new route</string>
+    <string name="event_title">Event title</string>
+    <string name="event_description">Event description</string>
+    <string name="event_date">Event date</string>
+    <string name="share_event">Share event</string>
+    <string name="number_of_available_routes">Number of available routes</string>
+    <string name="date_picker">Date picker</string>
+    <string name="time_picker">Time picker</string>
+
+    <!-- Details Event Fragment-->
+    <string name="number_of_joined_users">Number of users that joined</string>
+    <string name="see_joined_users">See joined users</string>
+
+    <!-- Settings Fragment-->
+    <string name="general_route_color">General route color</string>
+    <string name="follow_route_color">Follow route color</string>
+    <string name="low_battery_mode">Low battery mode</string>
+    <string name="on">ON</string>
+    <string name="OFF">OFF</string>
+
+    <!-- Leaderboards Fragment-->
+    <string name="greatest_distance_traveled">Greatest distance traveled</string>
+</resources>

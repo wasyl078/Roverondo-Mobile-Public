@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    tools:context=".fragments.DetailsWorkoutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsWorkoutMapBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsWorkoutBackgroundBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/gradient_glass_capsule_border"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/detailsWorkoutMapView"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/gradient_glass_capsule_border"
+                            map:liteMode="true" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:weightSum="100">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="55"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutTotalDurationImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_timer"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutTotalDurationTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutTotalDurationImageView"
+                                    android:text="@string/total_duration"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutTotalDurationDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutTotalDurationTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutTotalDurationTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutStartTimeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_time"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutStartTimeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutStartTimeImageView"
+                                    android:text="@string/start_time"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutStartTimeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutStartTimeTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutStartTimeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutAverageSpeedImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_speed"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAverageSpeedTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutAverageSpeedImageView"
+                                    android:text="@string/average_speed"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAverageSpeedDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutAverageSpeedTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutAverageSpeedTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutMinPressureImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_thumb_down"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMinPressureTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutMinPressureImageView"
+                                    android:text="@string/min_pressure"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMinPressureDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutMinPressureTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutMinPressureTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutMaxPressureImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_thumb_up"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxPressureTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutMaxPressureImageView"
+                                    android:text="@string/max_pressure"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxPressureDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutMaxPressureTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutMaxPressureTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutAvgAttitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_horizontal"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAvgAttitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutAvgAttitudeImageView"
+                                    android:text="@string/avg_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAvgAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutAvgAttitudeTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutAvgAttitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutLocationImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutLocationTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutLocationImageView"
+                                    android:text="@string/location"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutLocationDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutLocationTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutLocationTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="45"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutTotalDistanceImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_timeline"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutTotalDistanceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutTotalDistanceImageView"
+                                    android:text="@string/total_distance"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutTotalDistanceDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutTotalDistanceTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutTotalDistanceTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutEndTimeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_flag"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutEndTimeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutEndTimeImageView"
+                                    android:text="@string/end_time"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutEndTimeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutEndTimeTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutEndTimeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutMaxSpeedImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_rocket"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxSpeedTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutMaxSpeedImageView"
+                                    android:text="@string/max_speed"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxSpeedDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutMaxSpeedTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutMaxSpeedTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutAvgPressureImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_thumbs"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAvgPressureTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutAvgPressureImageView"
+                                    android:text="@string/avg_pressure"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAvgPressureDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutAvgPressureTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutAvgPressureTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutMinAttitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_up"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMinAttitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutMinAttitudeImageView"
+                                    android:text="@string/min_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMinAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutMinAttitudeTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutMinAttitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutMaxAttitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_up"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxAttitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutMaxAttitudeImageView"
+                                    android:text="@string/max_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutMaxAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutMaxAttitudeTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutMaxAttitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsWorkoutAuthorRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsWorkoutAuthorImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_cloud_download"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAuthorTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsWorkoutAuthorImageView"
+                                    android:text="@string/author"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsWorkoutAuthorDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsWorkoutAuthorTextView"
+                                    android:layout_alignStart="@+id/detailsWorkoutAuthorTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/AppGray" />
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsWorkoutSpeedProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsWorkoutSpeedProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/detailsWorkoutSpeedProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/speed_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/detailsWorkoutSpeedProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsWorkoutElevationProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsWorkoutElevationProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/detailsWorkoutElevationProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevation_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/detailsWorkoutElevationProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsWorkoutPressureProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsWorkoutPressureProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/detailsWorkoutPressureProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pressure_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/detailsWorkoutPressureProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_wall"
+            android:icon="@drawable/ic_wall"
+            android:title="@string/wall" />
+        <item
+            android:id="@+id/nav_new_route"
+            android:icon="@drawable/ic_new_route"
+            android:title="@string/new_route" />
+        <item
+            android:id="@+id/nav_set_up_route"
+            android:icon="@drawable/ic_set_up_route"
+            android:title="@string/set_up_route" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/ic_date"
+            android:title="@string/event_creator" />
+        <item
+            android:id="@+id/nav_leaderboards"
+            android:icon="@drawable/ic_leaderboards"
+            android:title="@string/leaderboards" />
+        <item
+            android:id="@+id/nav_search_users"
+            android:icon="@drawable/ic_search"
+            android:title="@string/search_users" />
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/setupBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="2dp"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="12dp"
+        card_view:cardUseCompatPadding="true">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/setupTopBlurView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_glass_capsule_border"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/setupDistanceImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_timeline"
+                    app:tint="@color/AppGray" />
+
+                <TextView
+                    android:id="@+id/setupDistanceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/setupDistanceImageView"
+                    android:text="@string/total_distance"
+                    android:textColor="@color/AppGray"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/setupDistanceDataTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/setupDistanceTextView"
+                    android:layout_alignStart="@+id/setupDistanceTextView"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/empty_distance"
+                    android:textColor="@color/AppGray"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/setupCreateRouteRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="0dp"
+                    android:background="@drawable/gradient_green_light_capsule"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/setupCreateRouteImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add"
+                        app:tint="@color/White" />
+
+                    <TextView
+                        android:id="@+id/setupCreateRouteTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/setupCreateRouteImageView"
+                        android:text="@string/create_route"
+                        android:textColor="@color/White"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/setupMapBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="8dp"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="12dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_glass_capsule_border"
+            android:padding="2dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/gradient_glass_capsule_border"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="0dp">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/setupMapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:padding="0dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/setupAddPointBackgroundCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/setupAddNumberOfPointsBackgroundCardView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/setupAddPointBlurLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/setupAddPointRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/gradient_blue_capsule"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/setupAddPointImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_add_circle"
+                        app:tint="@color/White" />
+
+                    <TextView
+                        android:id="@+id/setupAddPointTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/setupAddPointImageView"
+                        android:text="@string/add_new_point"
+                        android:textColor="@color/White"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/setupAddNumberOfPointsBackgroundCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/setupAddPointBackgroundCardView"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/setupNumberOfPointsBlurLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/setupNumberOfPointsRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/gradient_blue_capsule"
+                    android:paddingVertical="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:id="@+id/setupNumberOfPointsImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_location"
+                        app:tint="@color/White" />
+
+                    <TextView
+                        android:id="@+id/setupNumberOfPointsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_toEndOf="@+id/setupNumberOfPointsImageView"
+                        android:text="@string/points_number"
+                        android:textColor="@color/White"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/setupListView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="-5dp"
+        android:scrollbarStyle="outsideInset" />
+
+
+</LinearLayout>

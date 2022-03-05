@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rowCommentWorkoutOutterLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rowCommentBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardElevation="12dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardUseCompatPadding="true">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/rowCommentBackgroundBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_white_capsule_border"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/rowCommentTopLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/rowCommentAuthorImageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_cloud_download"
+                        app:tint="@color/AppGray" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/rowCommentAuthorImageView"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rowCommentAuthorTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppGray"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/rowCommentDateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/placeholder"
+                            android:textColor="@color/AppLightGray"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rowCommentReactionRelativeLayout"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowCommentTopLinearLayout"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/rowCommentReactionImageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_thumb_up"
+                        app:tint="@color/AppLightGray" />
+
+                    <TextView
+                        android:id="@+id/rowCommentReactionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_toEndOf="@+id/rowCommentReactionImageView"
+                        android:text="0"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/AppLightGray"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/rowCommentContentTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowCommentTopLinearLayout"
+                    android:layout_alignStart="@+id/rowCommentTopLinearLayout"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="-5dp"
+                    android:text="@string/placeholder"
+                    android:textColor="@color/AppGray"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

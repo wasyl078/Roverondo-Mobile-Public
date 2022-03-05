@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    tools:context=".fragments.DetailsEventFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsEventMapBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsEventBackgroundBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/gradient_glass_capsule_border"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/detailsEventMapView"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/gradient_glass_capsule_border"
+                            map:liteMode="true" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="55"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventStartTimeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_time"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventStartTimeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventStartTimeImageView"
+                                    android:text="@string/start_time"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventStartTimeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventStartTimeTextView"
+                                    android:layout_alignStart="@+id/detailsEventStartTimeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventTotalDistanceImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_timeline"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventTotalDistanceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventTotalDistanceImageView"
+                                    android:text="@string/total_distance"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventTotalDistanceDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventTotalDistanceTextView"
+                                    android:layout_alignStart="@+id/detailsEventTotalDistanceTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventMinAltitudeRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventMinAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_down"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventMinAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventMinAltitudeImageView"
+                                    android:text="@string/min_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventMinAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventMinAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsEventMinAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventMaxAltitudeRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventMaxAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_up"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventMaxAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventMaxAltitudeImageView"
+                                    android:text="@string/max_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventMaxAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventMaxAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsEventMaxAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventUsersButtonRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/detailsEventUsersJoinedRelativeLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/gradient_blue_capsule"
+                                    android:paddingVertical="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="5dp">
+
+                                    <ImageView
+                                        android:id="@+id/detailsEventUsersJoinedImageView"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_list"
+                                        app:tint="@color/White" />
+
+                                    <TextView
+                                        android:id="@+id/detailsEventUsersJoinedTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_toEndOf="@+id/detailsEventUsersJoinedImageView"
+                                        android:text="@string/see_joined_users"
+                                        android:textColor="@color/White"
+                                        android:textSize="15sp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="45"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventStartDateImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_date"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventStartDateTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventStartDateImageView"
+                                    android:text="@string/start_date"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventStartDateDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventStartDateTextView"
+                                    android:layout_alignStart="@+id/detailsEventStartDateTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventLocationImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventLocationTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventLocationImageView"
+                                    android:text="@string/location"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventLocationDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventLocationTextView"
+                                    android:layout_alignStart="@+id/detailsEventLocationTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventAvgAltitudeRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventAvgAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_horizontal"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventAvgAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventAvgAltitudeImageView"
+                                    android:text="@string/avg_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventAvgAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventAvgAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsEventAvgAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventAuthorRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsEventAuthorImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_cloud_download"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventAuthorTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsEventAuthorImageView"
+                                    android:text="@string/author"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsEventAuthorDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsEventAuthorTextView"
+                                    android:layout_alignStart="@+id/detailsEventAuthorTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsEventButtonRelativeLayout"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/detailsEventJoinRelativeLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/gradient_green_light_capsule"
+                                    android:paddingVertical="5dp"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/detailsEventJoinImageView"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/ic_next"
+                                        app:tint="@color/White" />
+
+                                    <TextView
+                                        android:id="@+id/detailsEventJoinTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_toEndOf="@+id/detailsEventJoinImageView"
+                                        android:text="@string/join"
+                                        android:textColor="@color/White"
+                                        android:textSize="20sp" />
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/AppGray" />
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsEventElevationProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsEventElevationProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/detailsEventElevationProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevation_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/detailsEventElevationProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/postWorkoutOutterLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/rowBackgroundCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        card_view:cardBackgroundColor="@android:color/transparent"
+        card_view:cardElevation="8dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardUseCompatPadding="true">
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/rowPointBackgroundBlurLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_glass_capsule_border"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/rowPointImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/AppGray" />
+
+                <TextView
+                    android:id="@+id/rowPointNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/rowPointImageView"
+                    android:text="@string/point"
+                    android:textColor="@color/AppGray"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/rowPointDataTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rowPointNumberTextView"
+                    android:layout_alignStart="@+id/rowPointNumberTextView"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/placeholder"
+                    android:textColor="@color/AppGray"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </eightbitlab.com.blurview.BlurView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

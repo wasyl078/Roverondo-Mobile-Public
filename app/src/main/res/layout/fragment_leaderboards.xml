@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/leaderboardsBlurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:outlineProvider="bounds">
+
+        <RelativeLayout
+            android:id="@+id/leaderboardsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="-3dp"
+            android:background="@drawable/gradient_glass_rectangle_border"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/greatest_distance_traveled"
+                android:textColor="@color/AppGray"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+
+    <ListView
+        android:id="@+id/leaderboardsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="-15dp"
+        android:layout_below="@+id/leaderboardsBlurLayout"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideInset"/>
+    
+</RelativeLayout>

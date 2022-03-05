@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_stripes_pink"
+    android:orientation="vertical"
+    tools:context=".fragments.DetailsRouteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsRouteMapBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsRouteBackgroundBlurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/gradient_glass_capsule_border"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/detailsRouteMapView"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/gradient_glass_capsule_border"
+                            map:liteMode="true" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="5dp"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="55"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteTotalDistanceImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_timeline"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteTotalDistanceTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteTotalDistanceImageView"
+                                    android:text="@string/total_distance"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteTotalDistanceDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteTotalDistanceTextView"
+                                    android:layout_alignStart="@+id/detailsRouteTotalDistanceTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteMinAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_down"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteMinAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteMinAltitudeImageView"
+                                    android:text="@string/min_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteMinAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteMinAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsRouteMinAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteMaxAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_up"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteMaxAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteMaxAltitudeImageView"
+                                    android:text="@string/max_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteMaxAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteMaxAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsRouteMaxAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="45"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteLocationImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_location"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteLocationTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteLocationImageView"
+                                    android:text="@string/location"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteLocationDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteLocationTextView"
+                                    android:layout_alignStart="@+id/detailsRouteLocationTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteAvgAltitudeImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_arrow_horizontal"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteAvgAltitudeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteAvgAltitudeImageView"
+                                    android:text="@string/avg_altitude"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteAvgAltitudeDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteAvgAltitudeTextView"
+                                    android:layout_alignStart="@+id/detailsRouteAvgAltitudeTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/detailsRouteAuthorRelativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingVertical="10dp">
+
+                                <ImageView
+                                    android:id="@+id/detailsRouteAuthorImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_cloud_download"
+                                    app:tint="@color/AppGray" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteAuthorTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_toEndOf="@+id/detailsRouteAuthorImageView"
+                                    android:text="@string/author"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/detailsRouteAuthorDataTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/detailsRouteAuthorTextView"
+                                    android:layout_alignStart="@+id/detailsRouteAuthorTextView"
+                                    android:layout_marginStart="0dp"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/placeholder"
+                                    android:textColor="@color/AppGray"
+                                    android:textSize="15sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/detailsRouteButtonRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp">
+
+                        <RelativeLayout
+                            android:id="@+id/detailsRouteStartRelativeLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/gradient_blue_capsule"
+                            android:paddingVertical="5dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="10dp">
+
+                            <ImageView
+                                android:id="@+id/detailsRouteStartImageView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/ic_next"
+                                app:tint="@color/White" />
+
+                            <TextView
+                                android:id="@+id/detailsRouteStartTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="0dp"
+                                android:layout_toEndOf="@+id/detailsRouteStartImageView"
+                                android:text="@string/start"
+                                android:textColor="@color/White"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/AppGray" />
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsRouteElevationProfileChartBackgroundCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="12dp"
+            card_view:cardUseCompatPadding="true">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/detailsRouteElevationProfileChartBackgroundBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_glass_capsule_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/detailsRouteElevationProfileChartTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevation_profile"
+                        android:textColor="@color/AppGray"
+                        android:textSize="25sp" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/detailsRouteElevationProfileLineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>
